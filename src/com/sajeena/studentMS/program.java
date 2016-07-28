@@ -84,14 +84,15 @@ public class program {
                     System.out.println("Enter Id of student:");
                     int a= input.nextInt();
                     Student student=studentdao.getbyId(a);
-                  
+                    if(student!=null){
                          System.out.println("Id:"+student.getId());
                          System.out.println("Name:"+student.getFirstname()+" "+student.getLastname());
                          System.out.println("Email Id:"+student.getEmail());
                          System.out.println("Phone no:"+student.getPhoneNo());
                          System.out.println("Gender:"+student.getGender());
                          System.out.println("Status:"+student.isStatus());
-                         
+                    }else
+                    System.out.println("Student could not be found."); 
                        
                     break;
                 case 5:
